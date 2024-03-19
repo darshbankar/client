@@ -9,3 +9,4 @@ export {default as CreateChannel} from './CreateChannel';
 export {default as TeamMessage} from './TeamMessage';
 export {default as Auth} from './Auth';
 export {default as UserList} from './UserList';
+export {default as ResultsDropdown} from './ResultsDropdown';
