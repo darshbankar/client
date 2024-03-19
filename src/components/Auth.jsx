@@ -118,7 +118,7 @@ const Auth = () => {
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
                   name='confirmPassword'
-                  type='text'
+                  type='password'
                   placeholder='Confirm Password'
                   onChange={handleChange}
                   required
