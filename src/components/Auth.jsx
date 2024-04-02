@@ -30,9 +30,9 @@ const Auth = () => {
 
     const { username, password, phoneNumber, avatarURL } = form;
 
-    const URL = 'http://localhost:5000/auth';
+    const baseURL = process.env.NODE_ENV ===  'prod' ? 'api/auth' : 'http://localhost:5000/api/auth';
 
-    const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+    const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${baseURL}/${isSignup ? 'signup' : 'login'}`, {
       username, password, fullName: form.fullName, phoneNumber, avatarURL,
   });
 
